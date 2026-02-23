@@ -46,6 +46,7 @@
     background-color: #f9f4ed;
     display:flex;
     align-items: center;  
+    padding: 15px; 
     border-radius: var(--borderRadius);
     font-family: var(--typefaceSansSerif);
     font-size: var(--typeBodySizeSmall);
@@ -55,6 +56,7 @@
     background-color: #f9f4ed;
     display:flex;
     align-items: center; 
+    padding: 15px; 
     border-radius: var(--borderRadius);
     font-family: var(--typefaceSansSerif);
     font-size: var(--typeBodySizeSmall);
