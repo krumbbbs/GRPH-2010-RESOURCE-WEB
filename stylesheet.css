@@ -1,3 +1,17 @@
+:root {
+    --typefaceSansSerif: "Arial", "Helvetica", sans-serif; 
+    --typefaceSerif: "Times New Roman", "Baskerville", serif; 
+    /* may need to change later on to account for global, user-driven changes */ 
+    --typeBodySizeSmall: 16pt; 
+    --typeBodySizeNormal: 20.8pt; 
+    --typeBodySizeBig: 25.6pt; 
+    --typeTitleSizeSmall: 50pt; 
+    --typeTitleSizeNormal: 65pt; 
+    --typeTitleSizeBig: 80pt;
+}
+
+
+
 .global {
     background-color: blue;
 }
@@ -34,9 +48,19 @@
 }
 
 .static {
-    margin-left: 300px;
-    margin-right: 300px; 
+    margin-left: 250px;
+    margin-right: 250px; 
     margin-top: 100px; 
+}
+
+.title {
+    font-family: var(--typefaceSansSerif);
+    font-size: var(--typeTitleSizeSmall); 
+}
+
+.body{
+    font-family: var(--typefaceSansSerif);
+    font-size: var(--typeBodySizeSmall);
 }
 
 .twoImages {
@@ -45,11 +69,15 @@
     justify-content: space-evenly;
 }
 
-.imageLeft {
+.imageLeft { 
+    width: 350px;
+    height: 50px; 
     background-color: red; 
 }
 
 .imageRight {
+    width: 350px;
+    height: 50px; 
     background-color: green; 
 }
 
@@ -59,6 +87,15 @@
     justify-content: space-evenly; 
 }
 
+.buttonLeft {
+    font-family: var(--typefaceSansSerif);
+    font-size: var(--typeBodySizeSmall);
+}
+
+.buttonRight {
+    font-family: var(--typefaceSansSerif);
+    font-size: var(--typeBodySizeSmall);
+}
 
 
 /* variables are definited by a ":root", then called with a "var()" */ 
