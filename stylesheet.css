@@ -46,9 +46,16 @@
 }
 
 .static {
-    margin-left: 250px;
-    margin-right: 250px; 
-    margin-top: 0px; 
+    margin-left: 20%;
+    margin-right: 20%; 
+}
+
+/* tested for Samsung Galaxy S8 */ 
+@media screen and (min-width: 360px) {
+        .static {
+        margin-left: 5%;
+        margin-right: 15%; 
+    }
 }
 
 .title {
