@@ -87,10 +87,15 @@ waffle_subMenu_open()
 
 */ 
 //VIDEO TUT:
-var root = document.querySelector(':root');
 
-function valueChange() {
+//refering to CSS variables (the root) 
+var root = document.querySelector(':root'); 
+
+//moving around CSS variables
+function f_waffleSide_open() {
     root.style.setProperty('--waffleSide', '--waffleSide_open') //do NOT put an equal sign!!!!*******
 } 
 
-valueChange()
+function f_waffleSide_close() {
+    root.style.setProperty('--waffleSide', '--waffleSide_close') //do NOT put an equal sign!!!!*******
+} 

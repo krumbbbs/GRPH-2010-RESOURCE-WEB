@@ -13,17 +13,26 @@ Google Fonts' "Get Embed Code" */
     --borderRadius: 10px; 
 
 /*changeable variables per button: */ 
-    --temp_contrastMed: #f9f4ed;
+    --temp_contrastMed: #f9f4ed; 
     --color_temp: white; 
-
+    
 /* global menu variables */
     --waffleSide: 0px;
+
+/* SWAPPABLE VARIABLES: */
+
+/*button openings*/
     --waffleSide_close: 0px;
     --waffleSide_open: 20%;
-
+    
+/*accessibility menu*/
+    /*colors*/
+    --bgColorB: #1e1c19;
+    --bgColorW: #f9f4ed; 
+    
 /*test*/
---primary-bg-color: #1e90ff;
-  --primary-color: #ffffff; 
+    --primary-bg-color: #1e90ff;
+    --primary-color: #ffffff; 
 }
 
 /* SVGs */
@@ -89,6 +98,7 @@ Google Fonts' "Get Embed Code" */
     display: flex; 
     flex-direction: column; 
     justify-content: space-evenly; 
+    background-color: var(--bgColorB);
     width: var(--waffleSide); 
 }
 
