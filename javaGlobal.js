@@ -99,3 +99,5 @@ function f_waffleSide_open() {
 function f_waffleSide_close() {
     root.style.setProperty('--waffleSide', '--waffleSide_close') //do NOT put an equal sign!!!!*******
 } 
+
+

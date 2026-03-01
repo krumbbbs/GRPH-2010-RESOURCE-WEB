@@ -98,18 +98,50 @@ Google Fonts' "Get Embed Code" */
     display: flex; 
     flex-direction: column; 
     justify-content: space-evenly; 
+    height: 20%;
+    position: fixed; 
+    margin-left: 1080px;
     background-color: var(--bgColorB);
     width: var(--waffleSide); 
+    overflow: hidden; /*prevents overflowing content from appearing*/
 }
 
 .optn_accessibility {
-    
+    background-color: var(--bgColorW);
+    padding: 10px; 
 }
+
+.accessibilityMenu {
+    background-color: var(--bgColorB);
+    font-family: var(--typefaceSansSerif);
+    color: var(--bgColorW);
+    padding: 10px; 
+    display: grid; 
+    grid-template-columns: 60% 30% auto; 
+}
+
+.a_bodyText {
+    display: grid; 
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 30% 30%; 
+    row-gap: 20%;
+}
+
+.a_website {
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30%; 
+    row-gap: 20%;
+}
+
 .optn_sourceList {
-    
+    background-color: var(--bgColorW);
+    padding: 10px; 
 }
+
 .optn_achievements {
-    
+    background-color: var(--bgColorW);
+    padding: 10px; 
 }
 
 .svgHome {
