@@ -5,10 +5,9 @@
 
     <head>
         <link rel="stylesheet" href="stylesheet.css"> 
-        <script src="java.js"></script> <!--javascript linking--> 
+        <script src="javaGlobal.js"></script> <!--javascript linking--> 
         <title>tempTitle</title>
     </head>
-
 
 <!--'../' moves 1 directory back; do NOT have to define what directory you go into!-->
 <!--you can link other HTML files with 'a href' while mentionning; use a '/' to refer to subfolders; put two periods before '/' to link to parent--> 
@@ -16,11 +15,13 @@
        
         <!--GLOBAL NAV BUTTONS-->
         <div class="global">
+
             <div class ="waffleGlobal">
-                <div class="waffleDiv">
-                    <nav><a href="/temp/">
+                <div class="waffleDiv" id="waffleDiv_ID">
+                    <nav><a href="/temp/"> <!--STYLE NAV to get rid of underline-->
                         <button class ="waffleButton">
                             Options
+                            
                             <!--SVG code taken from illustrator drawings imported to broswers--> 
                             <svg class ="svgWaffle">
                                 <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" sry="10.95"/>
@@ -28,24 +29,31 @@
                                 <line class="cls-1" x1="21.81" y1="41.46" x2="61.11" y2="41.46"/>
                                 <line class="cls-1" x1="21.81" y1="54.02" x2="61.11" y2="54.02"/>
                             </svg>
+                            
                         </button>
                     </a></nav>
-                    </div>
-                <div class="homeGlobal">
-                    <div class="homeDiv">   
-                        <nav><a href="index.html">
-                            <button class ="homeButton">
-                                Home
-                                <svg class ="svgHome">
-                                  <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
-                                  <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
-                                  <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
-                                  <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
-                                </svg> 
-                            </button>
-                        </a></nav>
-                    </div>
+                <div class="waffle_subMenu" id="waffle_subMenu_ID">
+                    <button class="optn_accessibility" id="optn_accessibility_ID">Accessibility</button>
+                    <button class="optn_sourceList" id="optn_sourceList_ID">Navigation</button>
+                    <button class="optn_achievements" id="optn_achievements_ID">Achievements</button>
                 </div>
+            </div>
+                
+            <div class="homeGlobal">
+                <div class="homeDiv">   
+                    <nav><a href="index.html">
+                        <button class ="homeButton">
+                            Home
+                            <svg class ="svgHome">
+                              <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
+                              <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
+                              <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
+                              <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
+                            </svg> 
+                        </button>
+                    </a></nav>
+                </div>
+            </div>
             </div>
         </div>
 
@@ -77,7 +85,12 @@
             <button class="body_testTypeNormal">body_normal</button>
             <button class="body_testTypeBig">body_big</button>
         </div>
-        -->
-        
+
+<script>
+    document.getElementById("demo_ID").innerText = "hello workd"; 
+</script>
+-->
+<script src="javaGlobal.js"></script> <!--javascript linking; script HAS to be loaded after defining HTML elements--> 
+
     </body>
 </html>

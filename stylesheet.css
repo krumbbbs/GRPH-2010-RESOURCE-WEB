@@ -15,8 +15,18 @@ Google Fonts' "Get Embed Code" */
 /*changeable variables per button: */ 
     --temp_contrastMed: #f9f4ed;
     --color_temp: white; 
+
+/* global menu variables */
+    --waffleSide: 0px;
+    --waffleSide_close: 0px;
+    --waffleSide_open: 20%;
+
+/*test*/
+--primary-bg-color: #1e90ff;
+  --primary-color: #ffffff; 
 }
 
+/* SVGs */
 .cls-1 {
     fill: #1e1c19;
     stroke: #1e1c19;
@@ -28,6 +38,7 @@ Google Fonts' "Get Embed Code" */
     fill: #f9f4ed;
 }
 
+/* GLOBAL ELEMENTS */
 .global {
     position: fixed; 
     right: 125px; 
@@ -35,7 +46,6 @@ Google Fonts' "Get Embed Code" */
     flex-direction: column; 
 }
 
-/*not really fixing visual issues? SVGs are taking up white space*/
 .waffleGlobal {
     width: 50px;
     height: 50px; 
@@ -48,6 +58,7 @@ Google Fonts' "Get Embed Code" */
     
 }
 
+/* GLOBAL ELEMENTS: buttons*/
 .waffleButton {
     background-color: var(--temp_contrastMed);
     display:flex;
@@ -70,28 +81,43 @@ Google Fonts' "Get Embed Code" */
     font-size: var(--typeBodySizeSmall);
 }
 
-/* changing the bottom margins helps to shrink button */
 .svgWaffle {
-    margin-bottom: -70px; 
+    margin-bottom: -70px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
+}
+
+.waffle_subMenu {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    width: var(--waffleSide); 
+}
+
+.optn_accessibility {
+    
+}
+.optn_sourceList {
+    
+}
+.optn_achievements {
+    
 }
 
 .svgHome {
     margin-bottom: -70px; 
 }
 
+/* STATIC ELEMENTS */
 .static {
     margin-left: 20%;
     margin-right: 20%; 
 }
 
-/* accomadated for Samsung Galaxy S8 */ 
-@media screen and (min-width: 360px) and (max-width: 500px) {
+@media screen and (min-width: 360px) and (max-width: 500px) { 
         .static {
         margin-left: 5%;
-        margin-right: 15%; 
+        margin-right: 15%; /* accomadated for Samsung Galaxy S8 */ 
     }
 }
-
 
 .title {
     font-family: var(--typefaceSansSerif);
