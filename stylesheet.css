@@ -1,7 +1,9 @@
 :root {
     --typefaceSansSerif: "Arial", "Helvetica", sans-serif; 
     --typefaceSerif: "Times New Roman", "Baskerville", serif; 
-    /* may need to change later on to account for global, user-driven changes */ 
+/* USE A WEB-HOSTED(?) FONT—WILL PULL FROM THE WEB; probably comes closer to what you wanted;
+Google Fonts' "Get Embed Code" */ 
+/* may need to change later on to account for global, user-driven changes */ 
     --typeBodySizeSmall: 16pt; 
     --typeBodySizeNormal: 20.8pt; 
     --typeBodySizeBig: 25.6pt; 
@@ -9,6 +11,10 @@
     --typeTitleSizeNormal: 65pt; 
     --typeTitleSizeBig: 80pt;
     --borderRadius: 10px; 
+
+/*changeable variables per button: */ 
+    --temp_contrastMed: #f9f4ed;
+    --color_temp: white; 
 }
 
 .cls-1 {
@@ -35,7 +41,7 @@
     height: 50px; 
     
 }
-
+ 
 .homeGlobal {
     width: 50px;
     height: 50px; 
@@ -43,9 +49,10 @@
 }
 
 .waffleButton {
-    background-color: #f9f4ed;
+    background-color: var(--temp_contrastMed);
     display:flex;
     align-items: center;  
+    justify-content: space-evely; 
     padding: 15px; 
     border-radius: var(--borderRadius);
     font-family: var(--typefaceSansSerif);
@@ -53,13 +60,23 @@
 }
 
 .homeButton {
-    background-color: #f9f4ed;
+    background-color: var(--temp_contrastMed);
     display:flex;
-    align-items: center; 
+    align-items: center;  
+    justify-content: space-evenly; 
     padding: 15px; 
     border-radius: var(--borderRadius);
     font-family: var(--typefaceSansSerif);
     font-size: var(--typeBodySizeSmall);
+}
+
+/* changing the bottom margins helps to shrink button */
+.svgWaffle {
+    margin-bottom: -70px; 
+}
+
+.svgHome {
+    margin-bottom: -70px; 
 }
 
 .static {
@@ -79,13 +96,24 @@
 .title {
     font-family: var(--typefaceSansSerif);
     font-size: var(--typeTitleSizeSmall); 
-    background-color: white;
+    background-color: var(--color_temp);
 }
 
 .body{
     font-family: var(--typefaceSansSerif);
     font-size: var(--typeBodySizeSmall);
-    background-color: white;
+    background-color: var(--color_temp);
+}
+
+.linkExternal {
+    background-color: var(--color_temp);
+}
+
+.oneImage {
+    display: flex; 
+    width: auto;
+    height: 350px; /*!!!need to correct vertical px later—edit flex itself? */
+    background-color: var(--color_temp);
 }
 
 .twoImages {
@@ -94,16 +122,40 @@
     justify-content: space-evenly;
 }
 
-.imageLeft { 
-    width: 350px;
+.threeImages {
+    display: flex; 
+    gap: 5%;
+    justify-content: space-evenly;
+}
+
+.imageLeft {  
+    width: 40%;
     height: 350px; 
-    background-color: white;
+    background-color: var(--color_temp);
 }
 
 .imageRight {
-    width: 350px;
+    width: 40%;
     height: 350px; 
-    background-color: white;
+    background-color: var(--color_temp);
+}
+
+.imageThreeLeft {
+    width: 30%;
+    height: 350px;
+    background-color: var(--color_temp);
+}
+
+.imageThreeMiddle {
+    width: 30%;
+    height: 350px; 
+    background-color: var(--color_temp);
+}
+
+.imageThreeRight {
+    width: 30%;
+    height: 350px; 
+    background-color: var(--color_temp);
 }
 
 .twoButtons {
@@ -112,10 +164,21 @@
     justify-content: space-evenly; 
 }
 
+.threeButtons {
+    display: grid; /*defines grid as a whole; child "commands" define alignment of each individual grid item through their divs */
+    grid-template-columns: 33% 33% 33%;  
+    /* border: 2px solid black; */ /*temp, grid testing */
+}
+
+.grid_3s {
+    display: grid; /*rememeber—flex display will autofill the negative space for you... not what you want when controlling positions of each item in a grid*/
+    justify-content: center; 
+}
+
 .buttonLeft {
     font-family: var(--typefaceSansSerif);
     font-size: var(--typeBodySizeSmall);
-    background-color: #f9f4ed;
+    background-color: var(--temp_contrastMed);
     border-radius: var(--borderRadius);
     padding: 20px; 
 }
@@ -123,11 +186,34 @@
 .buttonRight {
     font-family: var(--typefaceSansSerif);
     font-size: var(--typeBodySizeSmall);
-    background-color: #f9f4ed;
+    background-color: var(--temp_contrastMed); 
     border-radius: var(--borderRadius);
     padding: 20px; 
 }
 
+.buttonLeft_3s {
+    font-family: var(--typefaceSansSerif);
+    font-size: var(--typeBodySizeSmall);
+    background-color: var(--temp_contrastMed);
+    border-radius: var(--borderRadius);
+    padding: 20px; 
+}
+
+.buttonMiddle_3s {
+    font-family: var(--typefaceSansSerif);
+    font-size: var(--typeBodySizeSmall);
+    background-color: var(--temp_contrastMed);
+    border-radius: var(--borderRadius);
+    padding: 20px; 
+}
+
+.buttonRight_3s {
+    font-family: var(--typefaceSansSerif);
+    font-size: var(--typeBodySizeSmall);
+    background-color: var(--temp_contrastMed); 
+    border-radius: var(--borderRadius);
+    padding: 20px; 
+}
 
 /* variables are definited by a ":root", then called with a "var()" */ 
 /*
@@ -136,3 +222,5 @@
     --colorBGtest: #1e1c19;
     --colorBGtest2: #f9f4ed;
 }
+
+*/
