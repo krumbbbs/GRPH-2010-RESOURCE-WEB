@@ -41,6 +41,9 @@
             //CAN PICK AT/ACCESS INDIVIDUAL PROPERTIES WITHIN OBJECT; YOU DO NOT** HAVE TO CALL THE WHOLE THING!
         //can nest funcitons within objects as "object methods"
 
+
+
+
 //MAIN GOAL: ALTER CSS VARIABLE USING JAVASCRIPT LOGIC; ACCESSED VIA BUTTON PRESSING 
 
 /*
@@ -86,8 +89,8 @@ myFunction_set()
 waffle_subMenu_open()
 
 */ 
-//VIDEO TUT:
 
+//VIDEO TUT:
 //refering to CSS variables (the root) 
 var root = document.querySelector(':root'); 
 
@@ -100,4 +103,18 @@ function f_waffleSide_close() {
     root.style.setProperty('--waffleSide', '--waffleSide_close') //do NOT put an equal sign!!!!*******
 } 
 
+/* RUN CHECKS TO CLOSE PARENT MENUS... code below = bugged 
+while (root.style('--waffleSide') = root.style('--waffleSide_open')) {
+    f_waffleSide_close()
+}
+*/
 
+function f_accessibilityFull_open () {
+    root.style.setProperty('--accessibilityFull', '--accessibilityFull_open')
+}
+
+function f_accessibilityFull_closed () {
+    root.style.setProperty('--accessibilityFull', '--accessibilityFull_close')
+}
+
+/*insert switch to run checks on whether or full accessibility menu is open/not (use to close pop-up)  */

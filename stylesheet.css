@@ -1,9 +1,7 @@
 :root {
-    --typefaceSansSerif: "Arial", "Helvetica", sans-serif; 
-    --typefaceSerif: "Times New Roman", "Baskerville", serif; 
-/* USE A WEB-HOSTED(?) FONT—WILL PULL FROM THE WEB; probably comes closer to what you wanted;
-Google Fonts' "Get Embed Code" */ 
-/* may need to change later on to account for global, user-driven changes */ 
+
+/*TYPOGRAPHY*/
+/*SCALES*/ 
     --typeBodySizeSmall: 16pt; 
     --typeBodySizeNormal: 20.8pt; 
     --typeBodySizeBig: 25.6pt; 
@@ -12,18 +10,35 @@ Google Fonts' "Get Embed Code" */
     --typeTitleSizeBig: 80pt;
     --borderRadius: 10px; 
 
-/*changeable variables per button: */ 
+/* COLORS */ 
     --temp_contrastMed: #f9f4ed; 
+    --color_dark:#1e1c19;
     --color_temp: white; 
-    
-/* global menu variables */
-    --waffleSide: 0px;
 
-/* SWAPPABLE VARIABLES: */
+/* HIGHLIGHTS */
+    /* */
+
+/*FACES*/ 
+    --typefaceSansSerif: "Arial", "Helvetica", sans-serif; 
+    --typefaceSerif: "Times New Roman", "Baskerville", serif; 
+/* USE A WEB-HOSTED(?) FONT—WILL PULL FROM THE WEB; probably comes closer to what you wanted;
+Google Fonts' "Get Embed Code" */ 
+/* may need to change later on to account for global, user-driven changes */ 
+
+/*typeset DEFAULT*/
+    --typeBodyFace: var(--typefaceSansSerif);
+    --typeBodySize: var(--typeBodySizeSmall);
+    --typeBodyColor: var(--color_dark);
+        
+/* GLOBAL VARIABLES */
+    --waffleSide: 0px;
+    --accessibilityFull: 0px; 
 
 /*button openings*/
     --waffleSide_close: 0px;
     --waffleSide_open: 20%;
+    --accessibilityFull_close: 0px; 
+    --accessibilityFull_open: 5fr; 
     
 /*accessibility menu*/
     /*colors*/
@@ -75,7 +90,7 @@ Google Fonts' "Get Embed Code" */
     justify-content: space-evely; 
     padding: 15px; 
     border-radius: var(--borderRadius);
-    font-family: var(--typefaceSansSerif);
+    font-family: var(--typeBodyFace);
     font-size: var(--typeBodySizeSmall);
 }
 
@@ -86,7 +101,7 @@ Google Fonts' "Get Embed Code" */
     justify-content: space-evenly; 
     padding: 15px; 
     border-radius: var(--borderRadius);
-    font-family: var(--typefaceSansSerif);
+    font-family: var(--typeBodyFace);
     font-size: var(--typeBodySizeSmall);
 }
 
@@ -95,12 +110,13 @@ Google Fonts' "Get Embed Code" */
 }
 
 .waffle_subMenu {
+    /* review (and add) padding for menu items */ 
     display: flex; 
     flex-direction: column; 
     justify-content: space-evenly; 
     height: 20%;
     position: fixed; 
-    margin-left: 1080px;
+    margin-left: 77.5%;
     background-color: var(--bgColorB);
     width: var(--waffleSide); 
     overflow: hidden; /*prevents overflowing content from appearing*/
@@ -113,11 +129,14 @@ Google Fonts' "Get Embed Code" */
 
 .accessibilityMenu {
     background-color: var(--bgColorB);
-    font-family: var(--typefaceSansSerif);
+    font-family: var(--typeBodyFace);
     color: var(--bgColorW);
-    padding: 10px; 
     display: grid; 
     grid-template-columns: 60% 30% auto; 
+    width: var(--accessibilityFull); 
+    overflow: hidden; 
+    position:fixed; 
+    margin-left: 15%; 
 }
 
 .a_bodyText {
@@ -162,15 +181,16 @@ Google Fonts' "Get Embed Code" */
 }
 
 .title {
-    font-family: var(--typefaceSansSerif);
+    font-family: var(--typeBodyFace);
     font-size: var(--typeTitleSizeSmall); 
     background-color: var(--color_temp);
 }
 
 .body{
-    font-family: var(--typefaceSansSerif);
-    font-size: var(--typeBodySizeSmall);
+    font-family: var(--typeBodyFace);
+    font-size: var(--typeBodySize);
     background-color: var(--color_temp);
+    color: var(--typeBodyColor)
 }
 
 .linkExternal {
@@ -244,7 +264,7 @@ Google Fonts' "Get Embed Code" */
 }
 
 .buttonLeft {
-    font-family: var(--typefaceSansSerif);
+    font-family: var(--typeBodyFace);
     font-size: var(--typeBodySizeSmall);
     background-color: var(--temp_contrastMed);
     border-radius: var(--borderRadius);
@@ -252,7 +272,7 @@ Google Fonts' "Get Embed Code" */
 }
 
 .buttonRight {
-    font-family: var(--typefaceSansSerif);
+    font-family: var(--typeBodyFace);
     font-size: var(--typeBodySizeSmall);
     background-color: var(--temp_contrastMed); 
     border-radius: var(--borderRadius);
@@ -260,7 +280,7 @@ Google Fonts' "Get Embed Code" */
 }
 
 .buttonLeft_3s {
-    font-family: var(--typefaceSansSerif);
+    font-family: var(--typeBodyFace);
     font-size: var(--typeBodySizeSmall);
     background-color: var(--temp_contrastMed);
     border-radius: var(--borderRadius);
@@ -268,7 +288,7 @@ Google Fonts' "Get Embed Code" */
 }
 
 .buttonMiddle_3s {
-    font-family: var(--typefaceSansSerif);
+    font-family: var(--typeBodyFace);
     font-size: var(--typeBodySizeSmall);
     background-color: var(--temp_contrastMed);
     border-radius: var(--borderRadius);
@@ -276,7 +296,7 @@ Google Fonts' "Get Embed Code" */
 }
 
 .buttonRight_3s {
-    font-family: var(--typefaceSansSerif);
+    font-family: var(--typeBodyFace);
     font-size: var(--typeBodySizeSmall);
     background-color: var(--temp_contrastMed); 
     border-radius: var(--borderRadius);
